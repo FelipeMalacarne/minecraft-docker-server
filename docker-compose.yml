@@ -22,7 +22,7 @@ services:
     image: itzg/mc-monitor
     command: export-for-prometheus
     environment:
-      EXPORT_SERVERS: mc
+      EXPORT_SERVERS: minecraft
       DEBUG: "true"
     depends_on:
       - minecraft
@@ -55,3 +55,8 @@ services:
       - ./dashboards:/etc/grafana/dashboards
     depends_on:
       - prometheus
+
+volumes:
+  mc-data: {}
+  prometheus-tsdb: {}
+  grafana-lib: {}
