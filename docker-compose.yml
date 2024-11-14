@@ -16,6 +16,7 @@ services:
       VERSION: "1.20.1"
       SEED: 7437135210536028694 
       MOTD: "Show the bola"
+      ALLOW_FLIGHT: TRUE
     volumes:
       - ./mcdata:/data
     restart: on-failure:3
